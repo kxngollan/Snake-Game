@@ -3,10 +3,14 @@ import turtle
 INITIAL_POS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
 
+
 class Snake:
     def __init__(self):
         self.snake_body = []
+        self.create()
+        self.head = self.snake_body[0]
 
+    def create(self):
         for position in INITIAL_POS:
             new_turtle = turtle.Turtle("square")
             new_turtle.color("white")
